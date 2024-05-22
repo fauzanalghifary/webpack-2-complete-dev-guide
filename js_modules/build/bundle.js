@@ -6,9 +6,9 @@
 /******/ 	function __webpack_require__(moduleId) {
 /******/
 /******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId])
+/******/ 		if(installedModules[moduleId]) {
 /******/ 			return installedModules[moduleId].exports;
-/******/
+/******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			i: moduleId,
@@ -60,28 +60,90 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "build/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-const sum = (a, b) => a + b;
+"use strict";
 
-module.exports = sum;
 
-/***/ },
+__webpack_require__(3);
+
+var _big = __webpack_require__(4);
+
+var _big2 = _interopRequireDefault(_big);
+
+var _small = __webpack_require__(5);
+
+var _small2 = _interopRequireDefault(_small);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var image = document.createElement('img');
+image.src = _small2.default;
+document.body.appendChild(image);
+
+var bigImage = document.createElement('img');
+bigImage.src = _big2.default;
+document.body.appendChild(bigImage);
+
+/***/ }),
 /* 1 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-const sum = __webpack_require__(0);
+"use strict";
 
-const total = sum(10, 5);
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var sum = function sum(a, b) {
+  return a + b;
+};
+
+exports.default = sum;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _sum = __webpack_require__(1);
+
+var _sum2 = _interopRequireDefault(_sum);
+
+__webpack_require__(0);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var total = (0, _sum2.default)(10, 5);
 console.log(total); // 15
 
-/***/ }
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "faa6a59abe1984b9cde7edc1c27a20be.jpg";
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "0d436214fe74cbe4f80b917388ff1ebd.jpg";
+
+/***/ })
 /******/ ]);
